@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = "~/Areas/Admin/Views/Shared/layout_admin.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Quản lý món ăn vặt</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Danh sách các món ăn vặt</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên món ăn</th>
+                                    <th>Giá</th>
+                                    <th>Mô tả</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Số lượng</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ 
+                                    int count = 1;
+                                }
+                                @foreach (var item in Model) {
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@item.name</td>
+                                    <td>@item.price</td>
+                                    <td>@item.des</td>
+                                    <td><img src="~/Assets/Admin/images/@item.image" width="60" height="60" /></td>
+                                    <td>@item.quantity</td>
+                                    <td><a href=""><i class="fa fa-edit text-success"></i></a>&ensp;<a href=""><i class="fa fa-times text-danger text"></i></a></td>
+                                </tr>
+                                    
+                                    count++;
+                                    
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>

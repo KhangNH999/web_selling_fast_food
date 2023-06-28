@@ -17,7 +17,7 @@ namespace WebBanDoAnVatMup.Areas.Admin
             context.MapRoute(
                 "Admin",
                 "Admin/{controller}/{action}/{id}",
-                new {controller = "LoginAdmin", action = "Index", id = UrlParameter.Optional }
+                new {controller = "LoginAdmin", action = "index", id = UrlParameter.Optional }
             );
         }
     }

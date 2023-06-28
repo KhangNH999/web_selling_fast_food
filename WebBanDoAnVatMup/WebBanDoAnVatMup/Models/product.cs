@@ -5,6 +5,7 @@ namespace WebBanDoAnVatMup.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Web;
 
     [Table("product")]
     public partial class product

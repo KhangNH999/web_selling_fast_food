@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Models\account_user.cs" />
     <Compile Include="Models\banDoAnVatMup_DB.cs" />
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,6 +200,7 @@
     <Content Include="Assets\Admin\dist\js\pages\dashboard2.js" />
     <Content Include="Assets\Admin\dist\js\pages\dashboard3.js" />
     <Content Include="Assets\Admin\images\image1.jpg" />
+    <Content Include="Assets\Admin\images\no_image.png" />
     <Content Include="Assets\Admin\js\login.js" />
     <Content Include="Assets\Admin\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
     <Content Include="Assets\Admin\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
@@ -2092,9 +2094,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Account\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\LoginAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\ManageFood\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Delete\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LoginAdmin\index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageFood\index.cshtml" />
     <Content Include="Assets\Admin\dist\css\adminlte.css.map" />
     <Content Include="Assets\Admin\dist\css\adminlte.min.css.map" />
     <Content Include="Assets\Admin\dist\css\alt\adminlte.components.css.map" />
@@ -2228,6 +2229,7 @@
     <Content Include="Assets\Admin\plugins\summernote\summernote.min.js.map" />
     <Content Include="Assets\Admin\plugins\toastr\toastr.js.map" />
     <Content Include="Areas\Admin\Views\Shared\layout_admin.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageFood\add_food.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2259,6 +2261,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Code\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Assets\Admin\images\products\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

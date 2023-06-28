@@ -167,11 +167,6 @@
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -220,7 +215,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/Admin/ManageFood/Index" class="nav-link">
+                                    <a href="/Admin/ManageFood/index" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Danh sách danh mục</p>
                                     </a>
@@ -243,13 +238,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/Admin/ManageFood/Index" class="nav-link">
+                                    <a href="/Admin/ManageFood/index" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Danh sách món ăn</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/Admin/Delete/Index" class="nav-link">
+                                    <a href="/Admin/ManageFood/add_food" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Thêm món ăn</p>
                                     </a>
@@ -257,7 +252,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="/Admin/LoginAdmin/Logout" class="nav-link">
+                            <a href="/Admin/LoginAdmin/logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Đăng xuất
@@ -321,6 +316,8 @@
     <script src="~/Assets/Admin/dist/js/adminlte.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Assets/Admin/dist/js/pages/dashboard.js"></script>
+    <!-- bs-custom-file-input -->
+    <script src="~/Assets/Admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
     <!-- DataTables  & Plugins -->
     <script src="~/Assets/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -350,6 +347,11 @@
                 "autoWidth": false,
                 "responsive": true,
             });
+        });
+    </script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
         });
     </script>
 </body>

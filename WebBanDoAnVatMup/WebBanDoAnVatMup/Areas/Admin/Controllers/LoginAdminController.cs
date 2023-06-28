@@ -11,16 +11,16 @@ namespace WebBanDoAnVatMup.Areas.Admin.Controllers
     public class LoginAdminController : Controller
     {
         // GET: Admin/Login
-        private banDoAnVatMup_DB db = new banDoAnVatMup_DB();
+        banDoAnVatMup_DB db = new banDoAnVatMup_DB();
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult index()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(account_user model)
+        public ActionResult index(account_user model)
         {
             var user_name = model.user_name;
             var password = model.password;
@@ -39,7 +39,7 @@ namespace WebBanDoAnVatMup.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public ActionResult Logout()
+        public ActionResult logout()
         {
             Session.Abandon();
             return RedirectToAction("Index", "LoginAdmin");

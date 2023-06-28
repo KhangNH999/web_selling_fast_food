@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = "~/Areas/Admin/Views/Shared/layout_admin.cshtml";
+}
+@model WebBanDoAnVatMup.Models.product
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Quản lý món ăn vặt</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                @using (Html.BeginForm("add_food", "ManageFood", FormMethod.Post, new {enctype = "multipart/form-data"}))
+                {
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Thêm món ăn vặt</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Tên sản phẩm</label>
+                                @Html.TextBoxFor(model => model.name, new { @class = "form-control", @placeholder = "Nhập tên sản phẩm", @autoforcus = "autofocus" })
+                            </div>
+                            <div class="form-group">
+                                <label>Giá sản phẩm</label>
+                                @Html.TextBoxFor(model => model.price, new { @class = "form-control", @placeholder = "Nhập giá sản phẩm", @autoforcus = "autofocus" })
+                            </div>
+                            <div class="form-group">
+                                <label>Mô tả sản phẩm</label>
+                                @Html.TextBoxFor(model => model.des, new { @class = "form-control", @placeholder = "Nhập mô tả sản phẩm", @autoforcus = "autofocus" })
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Hình ảnh sản phẩm</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" name="image_file" id="exampleInputFile" onchange="chooseFile(this)" accept="image/gif, image/jpeg, image/png">
+                                            <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <img id="image" src="~/Assets/Admin/images/no_image.png" width="200" height="200" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Số lượng sản phẩm</label>
+                                    @Html.TextBoxFor(model => model.quantity, new { @class = "form-control", @placeholder = "Nhập số lượng sản phẩm", @autoforcus = "autofocus" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function chooseFile(fileInput) {
+        if (fileInput.files && fileInput.files[0]) {
+            var render = new FileReader();
+            render.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+            }
+            render.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>
